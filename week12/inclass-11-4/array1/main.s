@@ -29,6 +29,7 @@ mainLoop:				@ for( int i = 0; i < 25; i++ ){
 	
 	@ 1<<2 == 1 * 4
 	@ 0x00 0x04 0x08 
+	//TODO FIX THIS ERROR INFRONT OF THE CLASS!!!!!!!
 	add r2, #1			// i++
 	add r0, r0, r2, lsl #2 //r0 = r0 + (r2*4)
 	bal mainLoop
