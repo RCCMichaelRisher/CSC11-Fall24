@@ -53,7 +53,7 @@ while: @ while( 1 ){
 	moveq r5, #0						@ on = false;
 
 	cmp r5, #0
-	beq skip 							@ if( on ){
+	bne skip 							@ if( on ){
 
 @ //if on lets the colors
 		mov r0, r4			@ //set the color with that binary value

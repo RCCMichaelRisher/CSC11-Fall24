@@ -7,7 +7,8 @@
 #define PIN_B 21
 #define PIN_BUTTON 12
 
-
+void rgb( int );
+void clear();
 
 int main(){
 	wiringPiSetupGpio();
@@ -34,7 +35,7 @@ int main(){
 		//if on lets the colors
 		if( on ){
 			//set the color with that binary value
-			rbg( color );
+			rgb( color );
 			printf( "color: %d\n", color );
 			//this just loops my number from 0 to 7 over and over
 			color = (color + 1) & 0b111;
@@ -53,7 +54,7 @@ void clear(){
 	return;
 }
 
-void rbg( int n ){
+void rgb( int n ){
 	clear();
 	// 100 red is on
 	// 010 green on
